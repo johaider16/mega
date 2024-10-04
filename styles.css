@@ -1,0 +1,25 @@
+#zonaFactura{
+    width: 60%;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+#FormularioFactura, #zonaFactura{
+    float: left;
+}
+
+#zonaFactura h1{
+    text-decoration: underline;
+}
+#zonaProductosAgregados{
+    clear: both;
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+#productosAgregados{
+    margin: auto;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> <!--vincular hoja de estilo a este documento-->
+</head>
+<body>
+
+
+<form id="FormularioFactura"> <!--formulario para capturar los datos-->
+
+    <h1>Nueva Factura</h1>
+
+    <!--inputs con el mismo class='campoForm' para luego obtenerlos y vaciarlos-->
+
+    <label for="codCliente">Código de cliente</label>
+    <input type="number" id="codCliente" class="campoForm"> <br><br>
+
+    <label for="codAsesor">Código de asesor</label>
+    <input type="text" id="codAsesor" class="campoForm"> <br><br>
+
+    <label for="codProducto">Código de producto</label>
+    <input type="text" id="codProducto" class="campoForm"> <br><br>
+
+    <label for="descripcionProducto">Descripcion producto</label>
+    <textarea disabled id="campoDescripcion" class="campoForm"> </textarea>
+    <br><br>
+
+    <label for="campoPrecio">Precio producto</label>
+    <input type="number" value="0" id="campoPrecio" disabled class="campoForm"> <br><br>
+
+    <label for="cantidad">Cantidad producto</label>
+    <input type="number" id="cantidad" class="campoForm"> <br><br>
+
+    <label for="formaPago">Forma de Pago</label>
+    <select id="formaPago">
+        <option value="Efectivo">Efectivo</option>
+        <option value="Transferencia">Transferencia</option>
+        <option value="QR">QR</option>
+    </select> <br><br>
+
+    <input type="submit" value="Generar Factura"> <!--Botón encargado de enviar este formulario-->
+
+</form>
+
+<div id="zonaFactura">  <!--contenedor para englobar los datos de la factura generada-->
+    <h1>Factura Generada:</h1>
+
+    <section id="Factura">
+    
+    </section>
+</div>
+
+<div id="zonaProductosAgregados"> <!--contenedor para englobar los productos que han sido agregados-->
+    <h1>Historial Productos Agregados</h1>
+    <table id="productosAgregados" border="1px">
+
+    </table>
+</div>
+
+
+</body>
+
+<!--vinculación de scripts para agregar y gestionar eventos de este documento-->
+
+<script src="cargarProductosAgregados.js"></script>
+
+<script src="validacionProducto.js"></script>
+
+<script src="generacionFactura.js"></script>
+
+<script src="validacionCamposFormulario.js"></script>
+
+</html>
